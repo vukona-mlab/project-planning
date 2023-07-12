@@ -1,0 +1,44 @@
+// 1. Display the UI with inputs, handled by the browser
+// 2. Declare variables that will be used
+INITIALIZE enteredText = ''
+INITIALIZE enteredTextArr = []
+INITIALIZE reversedTextArr = []
+INITIALIZE reversedText = ''
+
+// 3. Listen for the button onclick
+INPUT('Button click') => checkIfPalindrome() 
+FUNCTION checkIfPalindrome() DO
+
+    // 4. Get the user entered text
+    INITIALIZE textInput = document.getElementByID()
+    SET enteredText = value from textInput node
+
+    // 5. Reverse the text
+    SET enteredTextArr = split (array) of enteredText
+    SET reversedTextArr = reverse of enteredTextArr
+    SET reversedText = join of reversedTextArr
+
+    // Part of 7, but can placed here to avoid repetition.
+    // 7. Create variables to be used in DOM manipulation
+    INITIALIZE domView = null
+    INITIALIZE resultView = null
+    SET domView = document.getElementByID() // target the parent element that will contain the results
+    SET resultView = new DOM element
+
+    // 6. Check if text matches the reversal of the text
+    IF (enteredText === reversedText) DO
+        
+        // 7. Show user the result
+        SET resultView.innerText = enteredText + "is a palindrome"
+    END ELSE DO
+
+        SET resultView.innerText = enteredText + "is not a palindrome" 
+    END
+
+    // 7. Show user the result
+    SET resultView as a child on domView
+END
+
+// INITIALIZE, INPUT, FUNCTION, SET, IF, END, DO are all keywords of the pseudocode, that's why they are capped
+// This is the step required before you can go straight to programming.
+// Could take a good thirty minutes to an hour.
