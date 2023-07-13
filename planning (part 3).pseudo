@@ -5,8 +5,6 @@ INITIALIZE enteredTextArr = []
 INITIALIZE reversedTextArr = []
 INITIALIZE reversedText = ''
 
-// 3. Listen for the button onclick
-INPUT('Button click') => checkIfPalindrome() 
 FUNCTION checkIfPalindrome() DO
 
     // 4. Get the user entered text
@@ -41,6 +39,10 @@ FUNCTION checkIfPalindrome() DO
     // Number 7 above can be simplified as shown in refactored_planning.pseudo
     
 END
+
+// 3. Listen for the button onclick
+INPUT('Button click') => checkIfPalindrome() 
+
 
 // INITIALIZE, INPUT, FUNCTION, SET, IF, END, DO are all keywords of the pseudocode, that's why they are capped
 // This is the step required before you can go straight to programming.
